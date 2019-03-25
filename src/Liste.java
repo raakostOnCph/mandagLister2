@@ -96,4 +96,39 @@ public class Liste {
 
     }
 
+    public Node findeNode(String s) {
+
+         Node res= null;
+
+         Node node = head;
+
+         while (node != null) {
+
+             if (node.getData().equalsIgnoreCase(s)) {
+                 res = node;
+                 break;
+             }
+             node = node.next;
+
+         }
+
+        return  res;
+    }
+
+    public Node removeNode(Node n) {
+
+         Node res = null;
+
+         if (n == null) {
+             return  res;
+         }
+         n.next.previous = n.previous;
+         n.previous.next = n.next;
+
+         n.next= null;
+         n.previous = null;
+
+         return n;
+    }
+
 }

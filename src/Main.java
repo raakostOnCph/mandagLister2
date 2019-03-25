@@ -13,11 +13,16 @@ public class Main {
 
 
 
-        Liste liste1 = liste.removeMulti(4);
-        System.out.println(liste1.prepareForPrint());
+//        Liste liste1 = liste.removeMulti(4);
+//        System.out.println(liste1.prepareForPrint());
+
+       // System.out.println(liste.prepareForPrint());
+
+
+
+      liste.removeNode(liste.findeNode("6"));
 
         System.out.println(liste.prepareForPrint());
-
 
     }
 
