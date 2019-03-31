@@ -3,7 +3,27 @@ public class Liste {
     Node head = null;
     Node tail = null;
 
-     public void multiInsert( String[] strings) {
+    
+    public boolean isHead(Node n) {
+        
+        if (n == head) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isTail(Node n) {
+
+        if (n == tail) {
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+    public void multiInsert( String[] strings) {
         for (int i = 0; i < strings.length; i++) {
 
             insertFromHead(strings[i]);
@@ -118,10 +138,17 @@ public class Liste {
     public Node removeNode(Node n) {
 
          Node res = null;
+         
+         
+         
 
          if (n == null) {
              return  res;
          }
+         if (isHead(n)) {
+             return removeFromHead();
+         }
+         
          n.next.previous = n.previous;
          n.previous.next = n.next;
 
@@ -131,4 +158,7 @@ public class Liste {
          return n;
     }
 
+    
+    
+    
 }

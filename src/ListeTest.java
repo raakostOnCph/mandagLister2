@@ -25,7 +25,7 @@ public class ListeTest {
         assertEquals(true,liste.onlyOne());
 
         liste.insertFromHead("preben");
-        assertNotEquals(false,liste.onlyOne());
+        assertEquals(false,liste.onlyOne());
     }
 
     @Test
