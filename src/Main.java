@@ -7,9 +7,9 @@ public class Main {
 
         String [] strings = {"1","2","3","4","5","6","7","8","9"};
 
-        liste.multiInsert(strings);
-
-        System.out.println(liste.prepareForPrint());
+//        liste.multiInsert(strings);
+//
+//        System.out.println(liste.prepareForPrint());
 
 
 
@@ -20,9 +20,17 @@ public class Main {
 
 
 
-      liste.removeNode(liste.findeNode("6"));
+        Kø kø = new Kø();
 
-        System.out.println(liste.prepareForPrint());
+        kø.insert("palle");
+        kø.insert("polle");
+        kø.insert("Ruthz");
+
+        kø.udskriv();
+
+        kø.remove();
+
+        kø.udskriv();
 
 
 
